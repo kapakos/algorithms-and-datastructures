@@ -11,7 +11,8 @@
         "describe": "readonly",
         "it": "readonly",
         "expect": "readonly",
-        "forEach": "readonly"
+        "forEach": "readonly",
+        "beforeEach": "readonly"
     },
     "parserOptions": {
         "ecmaVersion": 2018
