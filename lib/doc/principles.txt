@@ -1,0 +1,15 @@
+1 Customer Obsession
+
+Example 1:
+A couple of months back we did a redesign of the activity page. It's the page at american express where our customers can look up their
+transactions, check their balances, their statements etc. We realized that our customers where dissatisfied with how we rearanged functional 
+components on our page and where very vocal about it.
+I was the tech lead of the activity team and my job was the implementation of all the new features on the activity pages. So the question now 
+was, should we keep implementing new features or should we address the issues our customers are facing with the redesign of the page.
+So I reached out to the team that consolidates the customer feedback and I asked them what where the top 5 complaints about our page. Since I 
+know the features of the page very well, I try to identify 3 items that could be fixed in a timely manner while getting the highest return of investment.
+The result of this was that we identified 3 items, fixed these together with the UX team and after that we saw that the negative customer feedback decreased 60%
+
+
+
+
