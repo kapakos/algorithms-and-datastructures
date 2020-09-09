@@ -2,7 +2,7 @@ const InvertBinaryTree = require('../lib/invert_binary_tree');
 const TreeNode = require('../lib/tree_node');
 const LevelorderTraversal = require('../lib/level_order_traversal');
 
-describe.only('InvertBinaryTree', () => {
+describe('InvertBinaryTree', () => {
   const simpleTree = new TreeNode(1,
     new TreeNode(2),
     new TreeNode(3)); 
