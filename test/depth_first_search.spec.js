@@ -2,7 +2,7 @@ const DepthFirstSearch = require('../lib/depth_first_search');
 const TreeNode = require('../lib/tree_node');
 const LevelorderTraversal = require('../lib/level_order_traversal');
 
-describe.only('DepthFirstSearch', () => {
+describe('DepthFirstSearch', () => {
   const tree = new TreeNode(1, 
     new TreeNode(2,
       new TreeNode(4),

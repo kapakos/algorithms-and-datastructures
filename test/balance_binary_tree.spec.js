@@ -1,18 +1,19 @@
-const { BinaryTreeNode, minDepth, maxDepth, breadthFirstTraversal } = require('../lib/balance_binary_tree')
+const {  minDepth, maxDepth, breadthFirstTraversal } = require('../lib/balance_binary_tree')
+const TreeNode = require('../lib/tree_node');
 
 describe('BinaryTreeNode', () => {
 
-  const tree = new BinaryTreeNode(1);
-  tree.left = new BinaryTreeNode(2);
-  tree.left.left = new BinaryTreeNode(4);
-  tree.right = new BinaryTreeNode(3);
-  tree.right.left = new BinaryTreeNode(5);
-  tree.right.left.right = new BinaryTreeNode(7);
-  tree.right.right = new BinaryTreeNode(6);
-  tree.right.right.left = new BinaryTreeNode(8);
+  const tree = new TreeNode(1);
+  tree.left = new TreeNode(2);
+  tree.left.left = new TreeNode(4);
+  tree.right = new TreeNode(3);
+  tree.right.left = new TreeNode(5);
+  tree.right.left.right = new TreeNode(7);
+  tree.right.right = new TreeNode(6);
+  tree.right.right.left = new TreeNode(8);
 
-  const shortTree = new BinaryTreeNode(1);
-  shortTree.left = new BinaryTreeNode(2);
+  const shortTree = new TreeNode(1);
+  shortTree.left = new TreeNode(2);
 
   describe('minDepth', () => {
     it('returns the minDepth of 3', () => {
@@ -41,6 +42,7 @@ describe('BinaryTreeNode', () => {
   describe('breadthFirstTraversal', () => {
     it('returns row by row', () => {
       const res = breadthFirstTraversal(tree);
+      console.log(res)
       expect(res).to.deep.equal([[ 1 ], [ 2, 3 ], [ 4, 5, 6], [7, 8]])
     }) 
   })
