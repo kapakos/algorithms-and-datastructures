@@ -3,14 +3,14 @@ const traverseList = require('../lib/list-traversal');
 describe('ListNode', () => {
   it('creates an empty ListNode', () => {
     const newNode = new ListNode();
-    expect(newNode.val).to.equal(null);
+    expect(newNode.val).to.equal(0);
     expect(newNode.next).to.equal(null);
   });
 
   it('creates a ListNode with an item and a next null element', () => {
     const newNode = new ListNode(3, new ListNode());
     expect(newNode.val).to.equal(3);
-    expect(newNode.next.val).to.equal(null);
+    expect(newNode.next.val).to.equal(0);
   })
 })
 
