@@ -1,4 +1,4 @@
-const {  minDepth, maxDepth, breadthFirstTraversal } = require('../lib/balance_binary_tree')
+const { isTreeBalanced, minDepth, maxDepth, breadthFirstTraversal } = require('../lib/balance_binary_tree')
 const TreeNode = require('../lib/tree_node');
 
 describe('BinaryTreeNode', () => {
@@ -14,6 +14,10 @@ describe('BinaryTreeNode', () => {
 
   const shortTree = new TreeNode(1);
   shortTree.left = new TreeNode(2);
+  
+  const unbalancedTree = new TreeNode(1);
+  unbalancedTree.left = new TreeNode(2);
+  unbalancedTree.left.left = new TreeNode(4);
 
   describe('minDepth', () => {
     it('returns the minDepth of 3', () => {
@@ -45,5 +49,17 @@ describe('BinaryTreeNode', () => {
       console.log(res)
       expect(res).to.deep.equal([[ 1 ], [ 2, 3 ], [ 4, 5, 6], [7, 8]])
     }) 
-  })
+  });
+
+  describe('Is Binary Tree Baloanced', () => {
+    it('compares minDepth and maxDepth', () => {
+      const isBalanced = isTreeBalanced(tree);
+      expect(isBalanced).to.equal(true);
+    }); 
+
+    it.skip('returns false if tree is not balanced', () => {
+      const isBalanced = isTreeBalanced(unbalancedTree);
+      expect(isBalanced).to.equal(false)
+    });
+  });
 });
